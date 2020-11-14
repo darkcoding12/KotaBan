@@ -13,7 +13,8 @@ intro="""
 """
 
 print(intro)
-token = input('[TOKEN] : ')
+tok = input('[TOKEN] : ')
+token = vk_api.VkApi(token = tok)
 vk = token.get_api()
 mess = vk.messages.getConversations(countoffset=0)['items']
 for i in mess:
